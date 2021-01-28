@@ -1,0 +1,23 @@
+{
+    "name": "kmlpandey77/laravel-redirection",
+    "description": "This package design for redirect 404 page to new link",
+    "authors": [
+        {
+            "name": "Kamal Pandey",
+            "email": "kml.pandey77@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Kmlpandey77\\Redirection\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kmlpandey77\\Redirection\\RedirectionServiceProvider"
+            ]
+        }
+    }
+}
