@@ -1,25 +1,31 @@
 <?php
 
-namespace Lotusnp\Starter;
+namespace Kmlpandey77\Redirection;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class RedirectionServiceProvider extends ServiceProvider{
-
+class RedirectionServiceProvider extends ServiceProvider
+{
     public function boot()
     {
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->registerRoutes();
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'redirection');
+
+        $this->publishes([
+            __DIR__.'/../config/redirection.php' => config_path('redirection.php'),
+        ], 'config');
     }
 
-    // public function register()
-    // {
-    //     $this->app->bind('redirection', function($app) {
-    //         return new Redirection();
-    //     });
-    // }
+    public function register()
+    {
+        $this->mergeConfigFrom(__DIR__.'/../config/redirection.php', 'redirection');
 
-
+        // $this->app->bind('redirection', function($app) {
+        //     return new Redirection();
+        // });
+    }
 
     protected function registerRoutes()
     {
@@ -35,5 +41,4 @@ class RedirectionServiceProvider extends ServiceProvider{
             'middleware' => config('redirection.middleware'),
         ];
     }
-
 }

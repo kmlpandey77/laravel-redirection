@@ -1,6 +1,8 @@
 {
     "name": "kmlpandey77/laravel-redirection",
     "description": "This package design for redirect 404 page to new link",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Kamal Pandey",

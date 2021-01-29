@@ -1,4 +1,5 @@
 <?php
+
 namespace Kmlpandey77\Redirection\Facades;
 
 use Illuminate\Support\Facades\Facade;
