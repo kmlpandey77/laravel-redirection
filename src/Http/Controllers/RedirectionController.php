@@ -69,7 +69,7 @@ class RedirectionController extends Controller
      */
     public function edit(Redirection $redirection)
     {
-        return view('admin.redirect.edit', compact('redirect'));
+        return view('redirection::edit', compact('redirection'));
     }
 
     /**
@@ -79,7 +79,7 @@ class RedirectionController extends Controller
      */
     public function update(Request $request, Redirection $redirection)
     {
-        $this->validate($request, [
+        $request->validate([
             'from_url' => 'required',
             'to_url' => 'required',
         ]);
@@ -91,7 +91,7 @@ class RedirectionController extends Controller
         $redirection->to_url = ltrim($to_url, '/');
         $redirection->save();
 
-        return redirect()->route('redirects.index')->with('success', 'Redirect saved.');
+        return redirect()->route('redirection.index')->with('success', 'Redirect saved.');
     }
 
     /**

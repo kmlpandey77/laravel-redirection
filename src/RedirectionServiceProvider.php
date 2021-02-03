@@ -22,9 +22,9 @@ class RedirectionServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/redirection.php', 'redirection');
 
-        // $this->app->bind('redirection', function($app) {
-        //     return new Redirection();
-        // });
+        $this->app->bind('redirection', function($app) {
+            return new Redirection();
+        });
     }
 
     protected function registerRoutes()
