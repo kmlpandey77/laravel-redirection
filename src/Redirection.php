@@ -10,7 +10,9 @@ class Redirection{
     {
         $redirect = RedirectionModel::where('from_url',$url)->first();
         if($redirect){
-            return redirect($redirect->to_url);
+            return $redirect->to_url;
         }
+
+        return false;
     }
 }

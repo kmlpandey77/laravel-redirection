@@ -3,4 +3,4 @@
 use Illuminate\Support\Facades\Route;
 use Kmlpandey77\Redirection\Http\Controllers\RedirectionController;
 
-Route::resource('redirection', RedirectionController::class);
+Route::resource(config('redirection.route_link'), RedirectionController::class);

@@ -50,7 +50,7 @@ class RedirectionController extends Controller
         $redirection->to_url = ltrim($to_url, '/');
         $redirection->save();
 
-        return redirect()->route('redirection.index')->with('success', 'Redirect added.');
+        return redirect()->route(config('redirection.route_link') .'.index')->with('success', 'Redirect added.');
     }
 
     /**
@@ -91,7 +91,7 @@ class RedirectionController extends Controller
         $redirection->to_url = ltrim($to_url, '/');
         $redirection->save();
 
-        return redirect()->route('redirection.index')->with('success', 'Redirect saved.');
+        return redirect()->route(config('redirection.route_link') .'.index')->with('success', 'Redirect saved.');
     }
 
     /**
@@ -103,6 +103,6 @@ class RedirectionController extends Controller
     {
         $redirection->delete();
 
-        return redirect()->route('redirection.index')->with('success', 'Redirect deleted.');
+        return redirect()->route(config('redirection.route_link') .'.index')->with('success', 'Redirect deleted.');
     }
 }

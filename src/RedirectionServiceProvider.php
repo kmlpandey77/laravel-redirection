@@ -16,6 +16,11 @@ class RedirectionServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/redirection.php' => config_path('redirection.php'),
         ], 'config');
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('views/vendor/redirection'),
+        ], 'views');
+
     }
 
     public function register()
