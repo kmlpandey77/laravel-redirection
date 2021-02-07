@@ -9,7 +9,9 @@ A package for handling redirects via database.
 
 ### Example
 From `example.com/non-existing-page` to `example.com/existing-page`
+
 From `example.com/old-page` to `example.com/new-page`
+
 From `example.com/old/about-us` to `example.com/new/about-us`
 
 
