@@ -14,9 +14,9 @@ class CreateRedirectionsTable extends Migration
     public function up()
     {
         Schema::create('redirections', function (Blueprint $table) {
-            $table->id();
-            $table->text('from_url');
-            $table->text('to_url');
+            $table->increments('id');
+            $table->mediumText('from_url');
+            $table->mediumText('to_url');
             $table->timestamps();
         });
     }
