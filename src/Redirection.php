@@ -12,7 +12,5 @@ class Redirection{
         if($redirect){
             return redirect($redirect->to_url);
         }
-
     }
-
 }
