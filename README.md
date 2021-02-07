@@ -43,7 +43,7 @@ You can create the `redirections` table by running:
 php artisan migrate
 
 ## Usage
-You just have to add an entry to the redirects links in the database by using `example.com\admin\redirects`. And you can change route link, prifix, and middleware in config
+You just have to add an entry to the redirects links in the database by using `example.com/admin/redirects`. And you can change route link, prifix, and middleware in config
 
 ```php
 
